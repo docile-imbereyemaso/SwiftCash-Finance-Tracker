@@ -3,6 +3,10 @@ import RootLayout from "./components/layout/RootLayout";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import NotFound from "./pages/NotFound";
+import DashboardLayout from "./components/dashboard/DashboardLayout";
+import Dashboard from "./components/dashboard/Dashboard";
+import Ledger from "./components/dashboard/Ledger";
+import DashboardNotFound from "./components/dashboard/DashboardNotFound";
 
 const router = createBrowserRouter([
   {
@@ -11,6 +15,15 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Login /> },
       { path: "register", element: <Register /> },
+    ],
+  },
+  {
+    path: "dashboard",
+    element: <DashboardLayout />,
+    children: [
+      { index: true, element: <Dashboard /> },
+      { path: "ledger", element: <Ledger /> },
+      { path: "*", element: <DashboardNotFound /> },
     ],
   },
   { path: "*", element: <NotFound /> },
