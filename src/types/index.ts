@@ -19,3 +19,19 @@ export interface CurrentConverterProps {
   transactionAmount?: number;
   transactionCurrency?: string;
 }
+
+export interface TransactionFormData {
+  amount: number;
+  type: "income" | "expense";
+  category: string;
+  description: string | null;
+  date: string;
+  currency: string;
+}
+
+// src/types/index.ts
+export interface TransactionFormProps {
+  initialData?: TransactionFormData;
+  isEditMode?: boolean;
+  onAction: (formData: FormData) => Promise<void>;
+}

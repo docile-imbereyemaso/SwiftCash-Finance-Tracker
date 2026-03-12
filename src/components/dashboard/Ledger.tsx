@@ -126,7 +126,7 @@ const Ledger: React.FC = () => {
           </div>
           <div className="flex items-center gap-2 ml-4">
             <NavLink
-              to="/transactions/add"
+              to="/dashboard/transaction"
               className="px-4 py-2 bg-indigo-600 text-white rounded-lg text-sm font-semibold hover:bg-indigo-700"
             >
               + Create Transaction
@@ -207,7 +207,7 @@ const Ledger: React.FC = () => {
                       </button>
 
                       <Link
-                        to={``}
+                        to={`/dashboard/edit-transaction/${transaction.id}`}
                         className="text-blue-600 hover:text-blue-800 font-medium text-sm hover:underline flex items-center gap-1"
                       >
                         <svg
@@ -226,7 +226,7 @@ const Ledger: React.FC = () => {
                         Edit
                       </Link>
                       <Link
-                        to={``}
+                        to={`/dashboard/view-transaction/${transaction.id}`}
                         className="text-indigo-600 hover:text-indigo-800 font-medium text-sm hover:underline flex items-center gap-1"
                       >
                         <svg
