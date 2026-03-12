@@ -6,11 +6,11 @@ const DashboardLayout: React.FC = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   return (
-    <div className="min-h-screen flex bg-slate-50 relative">
+    <div className="min-h-screen flex bg-slate-50 relative px-4">
       {!isSidebarOpen && (
         <button
           onClick={() => setIsSidebarOpen(true)}
-          className="lg:hidden p-4 text-slate-600 z-50 fixed top-0 left-0"
+          className="lg:hidden p-4 text-slate-600 z-50 fixed top-0 bg-fuchsia-300 rounded-md"
         >
           <svg
             className="w-6 h-6"

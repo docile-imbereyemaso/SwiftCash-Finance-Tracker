@@ -6,6 +6,7 @@ export interface Links {
 export interface TransactionCardProps {
   title: string;
   value: number;
+  type: string;
 }
 
 export interface SideBarProps {
